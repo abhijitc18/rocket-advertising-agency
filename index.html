@@ -6,7 +6,7 @@
     <title>Rocket Advertising Agency</title>
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
-    <script src="assets/js/main.js"></script>
+
     <!--Favicon-->
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -32,30 +32,43 @@
       </a>
       <div class="menu-items">
         <a class="menu-link" href="#home">Home</a>
+        <a class="menu-link" href="#about">About Us</a>
         <a class="menu-link" href="#offers">Offers</a>
         <a class="menu-link" href="#pricing_plans">Pricing & Plans</a>
         <a class="menu-link" href="#services">Services</a>
-        <a class="menu-link" href="#about">About</a>
         <a class="menu-link" href="#contact">Contact Us</a>
       </div>
     </div>
 
-    <section class="slider-section">
-      <div class="slider-container">
-        <div class="slides">
-          <div class="slide">
-            <img src="assets/img/banner_00.png" alt="slider-banner" />
-          </div>
-          <div class="slide">
-            <img src="assets/img/banner_01.png" alt="slider-banner" />
-          </div>
-          <div class="slide">
-            <img src="assets/img/banner_02.png" alt="slider-banner" />
-          </div>
-          <div class="slide">
-            <img src="assets/img/banner_03.png" alt="slider-banner" />
-          </div>
-        </div>
+    <!--carousel Session-->
+    <section>
+      <div class="carousel" data-carousel>
+        <button class="carousel-button" data-carousel-btn="prev">
+          &#10094;
+        </button>
+        <button class="carousel-button" data-carousel-btn="next">
+          &#10095;
+        </button>
+        <ul data-carousel-slides>
+          <li class="slide" data-carousel-slide data-active>
+            <img src="assets/img/banner_00.png" alt="banner_00" alt="image-1" />
+          </li>
+          <li class="slide" data-carousel-slide>
+            <img src="assets/img/banner_01.png" alt="image-2" />
+          </li>
+          <li class="slide" data-carousel-slide>
+            <img src="assets/img/banner_02.png" alt="image-3" />
+          </li>
+          <li class="slide" data-carousel-slide>
+            <img src="assets/img/banner_03.png" alt="image-3" />
+          </li>
+        </ul>
+        <ul data-carousel-dots>
+          <li data-carousel-dot data-active></li>
+          <li data-carousel-dot></li>
+          <li data-carousel-dot></li>
+          <li data-carousel-dot></li>
+        </ul>
       </div>
     </section>
 
@@ -69,14 +82,16 @@
               We Are <span class="colorfull"> Rocket Advertising </span> Agency
             </h1>
             <p class="text-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              impedit, exercitationem reiciendis cumque obcaecati fugit quidem
-              sint veniam magni itaque dolor sequi. Placeat harum delectus modi
-              sit esse, quis debitis!
+              We are a team of creative minds, strategists, and innovators
+              fueled by the dynamic energy of the digital realm. Our mission is
+              clear yet impactful: to transform your brand into a captivating
+              narrative that resonates deeply with your audience. We craft
+              experiences, uphold authenticity, and champion innovation. With
+              meticulous design and data-driven strategies, we are dedicated to
+              making your brand exceptional. Residential Cleaning Services
+              Corporate Cleaning Services Industrial Cleaning Services Sofa
+              Cleaning Services
             </p>
-            <div class="call-to-action">
-              <a href="" class="btn">Get Started</a>
-            </div>
           </div>
         </div>
         <div class="image-container">
@@ -86,33 +101,73 @@
     </main>
     <!--End Hero Session-->
 
-    <!--Client Session-->
-    <section class="client">
-      <div class="container h-100">
-        <div class="row align-items-center h-100">
-          <div class="container rounded">
-            <h1 class="text-center">Our Trusted Client</h1>
-            <div class="slider">
-              <div class="logos">
-                <i class="fa fa-js"></i>
-                <i class="fa fa-linkedin fa-4x"></i>
-                <i class="fa fa-dribbble fa-4x"></i>
-                <i class="fa fa-medium fa-4x"></i>
-                <i class="fa fa-github fa-4x"></i>
-              </div>
-              <div class="logos">
-                <i class="fa fa-js-fa-4x"></i>
-                <i class="fa fa-linkedin fa-4x"></i>
-                <i class="fa fa-dribbble fa-4x"></i>
-                <i class="fa fa-medium fa-4x"></i>
-                <i class="fa fa-github fa-4x"></i>
-              </div>
-            </div>
-          </div>
+    <!--Offer Session-->
+
+    <section class="offers">
+      <h2 class="offers-heading">Offers For Web-development</h2>
+      <label class="toggle-switch">
+        <input type="checkbox" id="pricingToggle" />
+        <span class="slider"></span>
+      </label>
+      <span> Get up to 30% discount annually</span>
+
+      <div class="pricing-cards">
+        <div class="card">
+          <h3>Starter Plan</h3>
+          <h2 class="price" data-monthly="9999" data-yearly="7499">
+            ₹ 9999 /Yr
+          </h2>
+          <ul>
+            <li>Static website up to 5 pages</li>
+            <li>Free domain (.in / .co.in)</li>
+            <li>Free professional email</li>
+            <li>Free SSL certification</li>
+            <li>Free 1 year SSD hosting</li>
+            <li>Mobile & SEO friendly design</li>
+            <li>Social media integration</li>
+            <li>Google map integration</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Business Plan</h3>
+          <h2 class="price" data-monthly="14999" data-yearly="9999">
+            ₹ 14999 /Yr
+          </h2>
+          <ul>
+            <li>Static website up to 10 pages</li>
+            <li>Free domain (.in / .co.in)</li>
+            <li>Free professional email</li>
+            <li>Free SSL certification</li>
+            <li>Free 1 year SSD hosting</li>
+            <li>Mobile & SEO friendly design</li>
+            <li>Social media integration</li>
+            <li>Google map integration</li>
+            <li>Admin panel access</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Enterprise Plan</h3>
+          <h2 class="price" data-monthly="19999" data-yearly="14999">
+            ₹ 19999 /Yr
+          </h2>
+          <ul>
+            <li>Static website up to 15 pages</li>
+            <li>Free domain (.in / .co.in)</li>
+            <li>Free professional email</li>
+            <li>Free SSL certification</li>
+            <li>Free 1 year SSD hosting</li>
+            <li>Mobile & SEO friendly design</li>
+            <li>Social media integration</li>
+            <li>Google map integration</li>
+            <li>Admin panel access</li>
+          </ul>
         </div>
       </div>
     </section>
-    <!--End Client Session-->
+
+    <!--End Offer Session-->
 
     <!--About Session-->
     <section class="about">
@@ -328,127 +383,185 @@
     </section>
     <!-- End Growth Session-->
 
-    <!-- Feedback Session-->
-    <section class="feedback">
-      <div class="feedback-heading">
-        <h1 class="feedback-main-heading">
-          Here Something From <span class="colorfull">Our Client </span>
-        </h1>
-        <p class="feedback-sub-heading">
-          Digital marketing is a component of marketing that utilizes internet
-          and online base digital technologies, platforms to promote products
-          and services.
-        </p>
-      </div>
-      <div class="feedback-container">
-        <div class="feedback-image">
-          <img src="assets/img/feedback.svg" class="feedback-img" alt="" />
-        </div>
-        <div class="feedback-text-container">
-          <!--Feedback 1-->
-          <div class="client-feedback">
-            <img
-              src="https://freesvg.org/img/16231558095-star-rating.png"
-              class="client-rating"
-              alt=""
-            />
-            <p class="feedback-rating-heading">
-              Digital marketing is a component of marketing that utilizes
-              internet and online base digital technologies, platforms to
-              promote products and services.
-            </p>
-            <h4 class="client-name">Mrs Mofiza</h4>
-            <h6 class="client-title">Managing Director</h6>
-            <div class="feedback-arrow">
-              <div class="left-arrow" onclick="showFeedback('back')">
-                <i class="fa fa-arrow-left"></i>
-              </div>
-              <div class="right-arrow" onclick="showFeedback('next')">
-                <i class="fa fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <!--End Feedback 1-->
+    <!--Client Session-->
+    <section class="client">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="container rounded">
+            <h1 class="text-center">Our Trusted Client</h1>
 
-          <!--Feedback 2-->
-          <div class="client-feedback" style="display: none">
-            <img
-              src="https://freesvg.org/img/16231558095-star-rating.png"
-              class="client-rating"
-              alt=""
-            />
-            <p class="feedback-rating-heading">
-              Digital marketing is a component of marketing that utilizes
-              internet and online base digital technologies, platforms to
-              promote products and services.
-            </p>
-            <h4 class="client-name">Adnan Khan</h4>
-            <h6 class="client-title">CEO & founder</h6>
-            <div class="feedback-arrow">
-              <div class="left-arrow" onclick="showFeedback('back')">
-                <i class="fa fa-arrow-left"></i>
-              </div>
-              <div class="right-arrow" onclick="showFeedback('next')">
-                <i class="fa fa-arrow-right"></i>
+            <!-- marquee -->
+            <div class="client-marquee">
+              <div class="marqee_slide">
+                <div class="marquee marquee--8">
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_01.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_02.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_03.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_04.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_05.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_06.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_07.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_08.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_09.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_10.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_11.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_12.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_13.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_14.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_15.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_16.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_17.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_18.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_19.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_20.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_21.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_22.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_23.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_24.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_25.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_26.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_27.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_28.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_29.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_30.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_31.png"
+                    alt="clients"
+                  />
+                  <img
+                    class="marquee__item"
+                    src="assets/img/client/Logo_32.png"
+                    alt="clients"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <!--End Feedback 2-->
-
-          <!--Feedback 3-->
-          <div class="client-feedback" style="display: none">
-            <img
-              src="https://freesvg.org/img/16231558095-star-rating.png"
-              class="client-rating"
-              alt=""
-            />
-            <p class="feedback-rating-heading">
-              Digital marketing is a component of marketing that utilizes
-              internet and online base digital technologies, platforms to
-              promote products and services.
-            </p>
-            <h4 class="client-name">Mrs Majid</h4>
-            <h6 class="client-title">Human Resourse</h6>
-            <div class="feedback-arrow">
-              <div class="left-arrow" onclick="showFeedback('back')">
-                <i class="fa fa-arrow-left"></i>
-              </div>
-              <div class="right-arrow" onclick="showFeedback('next')">
-                <i class="fa fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <!--End Feedback 3-->
         </div>
       </div>
     </section>
-
-    <!--End Feedback Session-->
-
-    <!--Newsletter Session-->
-    <section class="newsletter">
-      <div class="newsletter-container">
-        <h1 class="newsletter-heading">Newsletter</h1>
-        <h4 class="newsletter-sub-heading">
-          Subscribe Maillist Our Latest
-          <span class="colorfull">Newsletter</span>
-        </h4>
-        <p class="newsletter-description">
-          Digital marketing is a component of marketing that utilizes internet
-          and online base digital technologies, platforms to promote products
-          and services.
-        </p>
-        <div class="newsletter-form">
-          <form class="subscription">
-            <div class="add-email">
-              <input type="email" placeholder="Enter your email" />
-              <button type="button">Subscribe</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!--End Newsletter Session-->
+    <!--End Client Session-->
 
     <section class="contact-section">
       <h5 class="find-us">FIND US</h5>
@@ -496,7 +609,7 @@
       </div>
 
       <!-- Social Media Icons -->
-      <div class="social-container">
+      <!-- <div class="social-container">
         <h3>CONNECT WITH US</h3>
         <div class="social-icons">
           <i class="fab fa-linkedin"></i>
@@ -505,12 +618,12 @@
           <i class="fab fa-youtube"></i>
           <i class="fab fa-whatsapp"></i>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <!--Footer Session -->
     <footer class="footer">
-      <div class="footer-container">
+      <!-- <div class="footer-container">
         <div class="footer-coloum-one">
           <h1 class="footer-main-heading">Digital Agency</h1>
           <p class="footer-coloum-one-description">
@@ -519,42 +632,8 @@
             and services.
           </p>
         </div>
+        
         <div class="footer-coloum-two">
-          <h1 class="footer-main-heading">Company</h1>
-          <div class="footer-one-menu">
-            <i class="fa fa-angle-double-right footer-angle"
-              ><a href="#"> Help Center</a></i
-            >
-            <i class="fa fa-angle-double-right footer-angle"
-              ><a href="#"> About</a></i
-            >
-            <i class="fa fa-angle-double-right footer-angle"
-              ><a href="#"> Blog</a></i
-            >
-            <i class="fa fa-angle-double-right footer-angle"
-              ><a href="#"> FAQs</a></i
-            >
-          </div>
-        </div>
-        <div class="footer-coloum-three">
-          <h1 class="footer-main-heading">Privacy</h1>
-
-          <div class="footer-one-menu">
-            <i class="fa fa-angle-double-right footer-angle"
-              ><a href="#"> Term & Condition</a></i
-            >
-            <i class="fa fa-angle-double-right footer-angle"
-              ><a href="#"> Supports</a></i
-            >
-            <i class="fa fa-angle-double-right footer-angle"
-              ><a href="#"> Exparts</a></i
-            >
-            <i class="fa fa-angle-double-right footer-angle"
-              ><a href="#"> Privacy & Policy</a></i
-            >
-          </div>
-        </div>
-        <div class="footer-coloum-four">
           <h1 class="footer-main-heading">Contact Us</h1>
           <div class="footer-contact">
             <i class="fa fa-envelope"></i>
@@ -570,7 +649,8 @@
             <span>info@rocketadvertisingagency.com</span>
           </div>
         </div>
-      </div>
+      </div> -->
+      
       <div class="footer-line">
         <hr />
       </div>
@@ -580,6 +660,7 @@
             ><b>Developed By:</b> <a href="">Rocket Advertising Agency</a></span
           >
         </div>
+        
         <!-- <div class="footer-underline-menu-items">
           <a href="#">Terms of use</a>
           <a href="#">Portfolio</a>
@@ -590,5 +671,6 @@
       </div>
     </footer>
     <!--End Footer Session -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -27,78 +27,70 @@ function showFeedback(direction) {
   feedbackElements[currentFeedbackIndex].style.display = "block";
 }
 
-// JavaScript for Scroll Detection
-// let lastScrollTop = 0;
+// carousel slider
+const buttons = document.querySelectorAll("[data-carousel-btn]");
+const dots = document.querySelectorAll("[data-carousel-dot]");
 
-// window.addEventListener("scroll", function () {
-//   const topnav = document.querySelector(".topnav");
-//   const menuItems = document.querySelector(".menu-items");
-//   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-//   if (scrollTop > lastScrollTop) {
-//     // Scrolling down
-//     topnav.style.backgroundColor = "#744245"; // Restore original background color
-//     menuItems.style.color = "#ffffff";
-//   } else {
-//     // Scrolling up
-//     topnav.style.backgroundColor = ""; // Change background to black
-//   }
-
-//   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-// });
-
-// JavaScript for Slider Functionality
-// let slideIndex = 0;
-
-// function moveSlide(n) {
-//   showSlides((slideIndex += n));
-// }
-
-// function showSlides(n) {
-//   const slides = document.querySelectorAll(".slide");
-//   if (n >= slides.length) {
-//     slideIndex = 0;
-//   }
-//   if (n < 0) {
-//     slideIndex = slides.length - 1;
-//   }
-//   const offset = -slideIndex * 100;
-//   document.querySelector(".slides").style.transform = `translateX(${offset}%)`;
-// }
-
-let slideIndex = 0;
-let autoSlideInterval;
-
-function moveSlide(n) {
-  const slides = document.querySelectorAll(".slide");
-  slideIndex += n;
-
-  // Handle wrap-around for slide index
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  } else if (slideIndex < 0) {
-    slideIndex = slides.length - 1;
-  }
-
-  // Move slides
-  const offset = -slideIndex * 100;
-  document.querySelector(".slides").style.transform = `translateX(${offset}%)`;
+function slide(button) {
+  return () => {
+    const offset = button.dataset.carouselBtn === "next" ? 1 : -1;
+    const slidesContainer = button
+      .closest("[data-carousel]")
+      .querySelector("[data-carousel-slides");
+    const slides = slidesContainer.querySelectorAll("[data-carousel-slide]");
+    const activeSlide = slidesContainer.querySelector("[data-active]");
+    const activeSlideIndex = [...slides].indexOf(activeSlide);
+    const nextSlideIndex = activeSlideIndex + offset;
+    switch (nextSlideIndex) {
+      case -1:
+        moveDot(2)();
+        break;
+      case 1:
+        moveDot(1)();
+        break;
+      case 2:
+        moveDot(2)();
+        break;
+      default:
+        moveDot(0)();
+        break;
+    }
+    if (nextSlideIndex < 0) {
+      slides[slides.length + nextSlideIndex].dataset.active = true;
+      return delete activeSlide.dataset.active;
+    }
+    if (nextSlideIndex >= slides.length) {
+      slides[0].dataset.active = true;
+      return delete activeSlide.dataset.active;
+    }
+    slides[nextSlideIndex].dataset.active = true;
+    return delete activeSlide.dataset.active;
+  };
 }
 
-function startAutoSlide() {
-  autoSlideInterval = setInterval(() => {
-    moveSlide(1); // Move to the next slide
-  }, 3000); // Change slide every 3 seconds
+function moveDot(i) {
+  return () => {
+    const dot = dots[i];
+    dots.forEach((d) => "active" in d.dataset && delete d.dataset.active);
+    dot.dataset.active = true;
+  };
 }
 
-function stopAutoSlide() {
-  clearInterval(autoSlideInterval);
-}
+window.addEventListener("DOMContentLoaded", () => {
+  buttons.forEach((button) => button.addEventListener("click", slide(button)));
+  setInterval(() => {
+    slide(buttons[1])();
+  }, 3500);
+});
 
-// Start auto-slide when the page loads
-startAutoSlide();
-
-// Pause auto-slide when user interacts with the slider
-const sliderContainer = document.querySelector(".slider-container");
-sliderContainer.addEventListener("mouseenter", stopAutoSlide);
-sliderContainer.addEventListener("mouseleave", startAutoSlide);
+// Offers checkbox
+document
+  .getElementById("pricingToggle")
+  .addEventListener("change", function () {
+    const isChecked = this.checked;
+    document.querySelectorAll(".price").forEach((price) => {
+      const monthly = price.getAttribute("data-monthly");
+      const yearly = price.getAttribute("data-yearly");
+      price.innerHTML = isChecked ? `₹ ${yearly} /Yr` : `₹ ${monthly} /Yr`;
+    });
+  });
