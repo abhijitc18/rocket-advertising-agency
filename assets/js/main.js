@@ -94,3 +94,23 @@ document
       price.innerHTML = isChecked ? `₹ ${yearly} /Yr` : `₹ ${monthly} /Yr`;
     });
   });
+
+// Open Modal Function
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "flex";
+}
+
+// Close Modal Function
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
+
+// Close Modal When Clicking Outside
+window.onclick = function (event) {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+};
