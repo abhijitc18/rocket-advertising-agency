@@ -381,7 +381,7 @@ li {
   display: flex;
   align-items: center;
 }
-li::before {
+.card-ul li::before {
   content: "✔";
   color: #ff0000;
   font-size: 18px;
@@ -700,7 +700,7 @@ li::before {
   background-color: transparent;
   width: 205px;
   border: 1px red dotted;
-  border-radius: 1rem;
+  border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -741,13 +741,16 @@ li::before {
 /* End Services Section */
 
 /* Why Choose-Us Section */
-/* Why Choose-Us Section */
+.choose-us-image {
+  /* height: 100px; */
+  width: 510px;
+}
 .choose-us {
   margin: 3% 8% 0 8%;
 }
 .choose-us-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(48%, 50%));
+  grid-template-columns: repeat(auto-fit, minmax(35%, 50%));
 }
 .choose-us-items {
   width: 100%;
@@ -761,7 +764,7 @@ li::before {
 }
 .choose-us-title {
   font-size: 3.2rem;
-  margin-top: 1rem;
+  margin: 0;
 }
 .choose-us-description {
   font-size: 1.1rem;
@@ -783,14 +786,14 @@ li::before {
 
 /* New Styling for Additional Benefits */
 .choose-us-benefits {
-  margin-top: 2rem;
+  width: 788px;
   padding: 1rem;
-  background: #f8f8f8;
-  border-radius: 1rem;
+  background: transparent;
+  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .choose-us-benefit-item {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.8rem;
   display: flex;
   align-items: center;
