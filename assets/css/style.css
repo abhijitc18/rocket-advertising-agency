@@ -334,6 +334,18 @@ li {
   text-align: center;
   border-top: 4px solid #6a0dad;
   border-bottom: 4px solid #6a0dad;
+
+  /* Flexbox for positioning */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to bottom */
+  height: 100%; /* Ensures equal height */
+}
+.graphic-card-hight {
+  height: 330px;
+}
+.web-card-hight {
+  height: 525px;
 }
 .card:hover {
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
@@ -360,6 +372,7 @@ ul {
   padding: 0;
   text-align: left;
   margin-top: 10px;
+  flex-grow: 1; /* Makes the list take up remaining space */
 }
 li {
   margin: 12px 0;
@@ -382,9 +395,9 @@ li::before {
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 15px;
   border-radius: 6px;
   transition: 0.3s;
+  margin-top: auto;
 }
 .read-more:hover {
   background: #fa0000;
@@ -627,84 +640,108 @@ li::before {
 
 /* Services Section */
 .services {
-  margin: 2% 8% 0 8%;
+  margin: 2% 8%;
+  padding: 2rem 0;
 }
+
 .services-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, minmax(300px, 1fr));
+  gap: 2rem;
 }
+
 .services-text {
-  width: 100%;
+  display: flex;
+  align-items: center;
 }
+
 .services-text-detail {
-  width: 100%;
-  margin-top: 6rem;
+  max-width: 100%;
 }
+
 .services-heading {
   font-size: 1.6rem;
   color: var(--main-color);
+  margin-bottom: 0.5rem;
 }
+
 .services-sub-heading {
-  font-size: 3.2rem;
-  margin-top: 1rem;
+  font-size: 2.5rem;
+  margin: 1rem 0;
 }
+
 .services-heading-detail {
   font-size: 1.1rem;
-  margin-top: -1rem;
-  margin-right: 15rem;
-  margin-bottom: 2.8rem;
+  margin-bottom: 2rem;
 }
+
 .services-btn {
-  border: 2px solid #fe4848;
-  width: 11rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--main-color);
   color: #fff;
-  padding: 0.5rem 1.3rem 0.5rem 1.3rem;
-  background-color: rgb(248, 79, 1);
   border-radius: 2rem;
-  text-align: center;
-  margin-top: 7rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
+
+.services-btn:hover {
+  background-color: #e64a19;
+}
+
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(48%, 50%));
+  grid-template-columns: repeat(5, 1fr); /* Ensures 3 cards in a row */
+  gap: 1.5rem;
 }
+
 .services-list-items {
-  background-color: rgb(248, 248, 248);
+  background-color: transparent;
+  width: 205px;
+  border: 1px red dotted;
   border-radius: 1rem;
-  display: flex;
-  height: 250px;
-  width: 260px;
-  flex-direction: column;
-  margin-top: 1rem;
-}
-.services-icon {
-  color: var(--main-color);
-  font-size: 7rem;
+  padding: 1.5rem;
   text-align: center;
-  height: 2.5rem;
-  margin-top: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.services-list-items:hover {
+  background-color: rgba(241, 0, 0, 0.404);
+  color: white;
+  border: none;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.services-list-items span {
+  font-size: 30px;
+}
+
 .services-list-heading {
-  text-align: center;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
-.services-list-detail {
-  text-align: center;
-  margin-top: -0.2rem;
+
+@media (max-width: 1024px) {
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.services-link {
-  text-align: center;
-  color: #000;
-}
-.services-link-colorfull {
-  text-align: center;
-  color: var(--main-color);
+
+@media (max-width: 768px) {
+  .services-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .services-list-items {
+    background-color: rgba(241, 0, 0, 0.404);
+    color: white;
+  }
 }
 
 /* End Services Section */
 
 /* Why Choose-Us Section */
-
+/* Why Choose-Us Section */
 .choose-us {
   margin: 3% 8% 0 8%;
 }
@@ -715,9 +752,9 @@ li::before {
 .choose-us-items {
   width: 100%;
 }
-.choose-us-text {
+/* .choose-us-text {
   margin-top: 20%;
-}
+} */
 .choose-us-heading {
   font-size: 1.6rem;
   color: var(--main-color);
@@ -742,6 +779,22 @@ li::before {
   text-align: center;
   font-size: 1.4rem;
   font-weight: 600;
+}
+
+/* New Styling for Additional Benefits */
+.choose-us-benefits {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.choose-us-benefit-item {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 /* End Choose-Us Section */
 
