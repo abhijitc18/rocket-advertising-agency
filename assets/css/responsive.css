@@ -90,6 +90,31 @@
     margin: 15px 0;
   }
 
+  /* popup model */
+  .modal {
+    top: 110px;
+    width: 70%;
+  }
+  .modal-content{
+    margin-left: 20px;
+  }
+  .modal-content h2{
+    font-size: 24px;
+  }
+  .modal-content p{
+    font-size: 12px;
+    text-align: justify;
+  }
+  .card-ul li{
+    font-size: 12px;
+  }
+  .modal-footer{
+    display: none;
+  }
+  .modal-content ul{
+    padding-left: 0;
+  }
+
   /* Services Section */
   .services-list {
     grid-template-columns: repeat(2, 1fr);
