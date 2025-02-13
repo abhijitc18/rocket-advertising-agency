@@ -1,3 +1,30 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all menu links
+  const menuLinks = document.querySelectorAll(".menu-link");
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default anchor behavior
+
+      // Get the target section ID from the href attribute
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 100, // Adjust 50px if there's a fixed navbar
+          behavior: "smooth", // Enables smooth scrolling
+        });
+      }
+    });
+  });
+});
+
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {

@@ -19,6 +19,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -30,18 +34,18 @@
       <a href="#" class="logo">
         <img src="assets/img/rocket_logo.png" alt="rocket_logo" />
       </a>
-      <div class="menu-items">
+      <div class="menu-items" id="menu">
         <a class="menu-link" href="#home">Home</a>
         <a class="menu-link" href="#about">About Us</a>
         <a class="menu-link" href="#offers">Offers</a>
-        <!-- <a class="menu-link" href="#pricing_plans">Pricing & Plans</a> -->
         <a class="menu-link" href="#services">Services</a>
         <a class="menu-link" href="#contact">Contact Us</a>
       </div>
+      <div class="icon" onclick="toggleMenu()">☰</div>
     </div>
 
     <!--carousel Session-->
-    <section>
+    <section id="home">
       <div class="carousel" data-carousel>
         <button class="carousel-button" data-carousel-btn="prev">
           &#10094;
@@ -73,11 +77,11 @@
     </section>
 
     <!--Hero Session-->
-    <main>
+    <main id="about">
+      <h2 class="common_title">About Us</h2>
       <div class="hero-container">
         <div class="main-container">
           <div class="heading-container">
-            <h4 class="about-main-heading">About Us</h4>
             <h1 class="main-heading">
               We Are <span class="colorfull"> Rocket Advertising </span> Agency
             </h1>
@@ -102,14 +106,12 @@
     <!--End Hero Session-->
 
     <!--Offer Session-->
-
-    <section class="offers">
+    <section class="offers" id="offers">
+      <h2 class="common_title">Offers</h2>
       <h2 class="offers-heading">Offers For Graphic Design</h2>
-
       <div class="pricing-cards">
         <div class="card graphic-card-hight">
           <h3>Festival Design Plan</h3>
-
           <ul class="card-ul">
             <li>1 Year Plan in ₹ 5999</li>
             <li>6 Month Plan in ₹ 3500</li>
@@ -123,7 +125,6 @@
 
         <div class="card graphic-card-hight">
           <h3>Combo Offer Plan</h3>
-
           <ul class="card-ul">
             <li>Starter Plan in ₹ 7499</li>
             <li>Business Plan in ₹ 9999</li>
@@ -136,7 +137,6 @@
 
         <div class="card graphic-card-hight">
           <h3>Custome Design Plan</h3>
-
           <ul class="card-ul">
             <li>Monthly 26 Post in ₹ 4999</li>
           </ul>
@@ -343,7 +343,8 @@
     <!--End Offer Session-->
 
     <!-- Services Session-->
-    <section class="services">
+    <section class="services" id="services">
+      <h2 class="common_title">Our Services</h2>
       <div class="services-container">
         <div class="services-text">
           <div class="services-text-detail">
@@ -431,7 +432,6 @@
         </div>
         <div class="choose-us-items">
           <div class="choose-us-text">
-            <h1 class="choose-us-heading">Choose Us</h1>
             <h3 class="choose-us-title">
               Why <span class="colorfull">Choose</span> Us?
             </h3>
@@ -453,6 +453,7 @@
                 <strong>Affordable Pricing</strong>
               </div>
             </div>
+
             <div class="choose-us-list-div">
               <div class="choose-us-items-list">
                 <span style="color: #ffc727; font-weight: bolder">3+</span>
@@ -476,7 +477,7 @@
                 <span style="color: #ffc727; font-weight: bolder">24/7</span>
                 <span>Support Available</span>
               </div>
-              <div class="choose-us-list-div"></div>
+              <!-- <div class="choose-us-list-div"></div> -->
             </div>
           </div>
         </div>
@@ -484,21 +485,21 @@
     </section>
     <!--End Choose Us Section-->
 
-    <!-- Services Session-->
+    <!-- Growth Session-->
     <section class="growth">
+      <h2 class="common_title">Growth Your Business</h2>
       <div class="growth-container">
         <div class="growth-text">
           <div class="growth-text-detail">
-            <h1 class="growth-heading">Growth Your Business</h1>
             <h3 class="growth-sub-heading">
-              <span class="colorfull">Marketing</span> Is The Most Powerfull
-              Part Of Growing Your
-              <span class="colorfull">Business Ability </span>
+              Fueling Your Business <span class="colorfull">Growth</span> with
+              <span class="colorfull">Powerful </span>Marketing...
             </h3>
             <p class="growth-heading-detail">
-              Digital marketing is a component of marketing that utilizes
-              internet and online base digital technologies, platforms to
-              promote products and services.
+              In today's competitive landscape, effective marketing is not just
+              an option - it's essential for survival and success. We understand
+              the unique challenges and opportunities facing businesses today,
+              and we're here to help you unlock your full growth potential.
             </p>
           </div>
         </div>
@@ -514,7 +515,7 @@
       <div class="container h-100">
         <div class="row align-items-center h-100">
           <div class="container rounded">
-            <h1 class="text-center">Our Trusted Client</h1>
+            <h2 class="common_title">Our Trusted Client</h2>
 
             <!-- marquee -->
             <div class="client-marquee">
@@ -689,9 +690,8 @@
     </section>
     <!--End Client Session-->
 
-    <section class="contact-section">
-      <h5 class="find-us">FIND US</h5>
-      <h2 class="stay-in-touch">Stay In Touch</h2>
+    <section class="contact-section" id="contact">
+      <h2 class="common_title">Stay In Touch</h2>
 
       <div class="contact-container">
         <!-- Google Map Embed -->
@@ -783,7 +783,10 @@
       <div class="footer-underline-menu">
         <div class="footer-credit">
           <span
-            ><b>Developed By:</b> <a href="">Rocket Advertising Agency</a></span
+            ><b>Developed By:</b>
+            <a href="https://rocketadvertisingagency.com/" target="_blank"
+              >Rocket Advertising Agency</a
+            ></span
           >
         </div>
 
