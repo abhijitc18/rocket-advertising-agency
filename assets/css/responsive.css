@@ -1,6 +1,6 @@
 @media (min-width: 320px) and (max-width: 991px) {
   .topnav {
-    width: 74%;
+    width: 100%;
   }
   .logo img {
     margin-left: -40px;
@@ -95,23 +95,23 @@
     top: 110px;
     width: 70%;
   }
-  .modal-content{
+  .modal-content {
     margin-left: 20px;
   }
-  .modal-content h2{
+  .modal-content h2 {
     font-size: 24px;
   }
-  .modal-content p{
+  .modal-content p {
     font-size: 12px;
     text-align: justify;
   }
-  .card-ul li{
+  .card-ul li {
     font-size: 12px;
   }
-  .modal-footer{
+  .modal-footer {
     display: none;
   }
-  .modal-content ul{
+  .modal-content ul {
     padding-left: 0;
   }
 

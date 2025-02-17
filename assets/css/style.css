@@ -5,6 +5,10 @@
   --main-color: rgb(248, 79, 1);
   --primary-color: #ffc727;
 }
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
 body {
   height: 100%;
   width: 100%;
