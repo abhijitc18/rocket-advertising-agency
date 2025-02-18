@@ -9,15 +9,17 @@
   .menu-items {
     display: none;
     flex-direction: column;
-    background: #dd7676;
+    background: #d7bcb5;
     position: absolute;
     top: 93px;
     right: 0;
-    width: 50%;
+    width: 35%;
     text-align: center;
     padding: 5px 0;
+    border-radius: 5px;
   }
   .menu-items a {
+    color: white;
     display: block;
     padding: 0px;
   }
@@ -89,14 +91,24 @@
   .toggle-switch {
     margin: 15px 0;
   }
+  .graphic-card-hight {
+    height: auto;
+  }
+  .web-card-hight {
+    height: auto;
+  }
+  .read-more {
+    background: #fa0000;
+    color: white;
+  }
 
   /* popup model */
   .modal {
-    top: 110px;
-    width: 70%;
+    top: 25px;
+    width: 100%;
   }
   .modal-content {
-    margin-left: 20px;
+    margin: 10px;
   }
   .modal-content h2 {
     font-size: 24px;
@@ -127,6 +139,9 @@
   }
   .services-list-heading {
     font-size: 10px;
+  }
+  .services-heading-detail {
+    text-align: justify;
   }
 
   /* Choose Us Section */

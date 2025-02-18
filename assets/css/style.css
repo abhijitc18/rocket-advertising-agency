@@ -2,8 +2,7 @@
   box-sizing: border-box;
 }
 :root {
-  --main-color: rgb(248, 79, 1);
-  --primary-color: #ffc727;
+  --main-color: rgb(255, 3, 3);
 }
 html {
   overflow-x: hidden;
@@ -14,34 +13,8 @@ body {
   width: 100%;
   padding-top: 90px;
   margin: 0;
-  background-size: 100% 100%;
-  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
-    0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  background-image: radial-gradient(
-      18% 28% at 24% 50%,
-      rgba(255, 213, 206, 0.733) 7%,
-      #073aff00 100%
-    ),
-    radial-gradient(18% 28% at 18% 71%, #dbdbdbf5 6%, #073aff00 100%),
-    radial-gradient(
-      70% 53% at 36% 76%,
-      rgba(241, 73, 87, 0.822) 0%,
-      #073aff00 100%
-    ),
-    radial-gradient(42% 53% at 15% 94%, #ffffffff 7%, #073aff00 100%),
-    radial-gradient(42% 53% at 34% 72%, #ffffffff 7%, #073aff00 100%),
-    radial-gradient(18% 28% at 35% 87%, #ffffffff 7%, #073aff00 100%),
-    radial-gradient(31% 43% at 7% 98%, #ffffffff 24%, #073aff00 100%),
-    radial-gradient(21% 37% at 72% 23%, #e768689c 24%, #073aff00 100%),
-    radial-gradient(35% 56% at 91% 74%, #8a4ffff5 9%, #073aff00 100%),
-    radial-gradient(74% 86% at 67% 38%, #ddb2ac34 24%, #073aff00 100%),
-    linear-gradient(
-      125deg,
-      rgba(240, 137, 137, 0.459) 1%,
-      rgba(248, 155, 155, 0.315) 100%
-    );
+  background-color: #efeff02d;
   overflow-x: hidden;
-  color: #34444b;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -54,7 +27,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background: #dd7676c9;
+  background: #ffffff;
   transition: background-color 0.3s ease;
   z-index: 1000;
   display: flex;
@@ -87,7 +60,7 @@ a {
 }
 
 .topnav a:hover {
-  color: white;
+  color: rgb(255, 0, 0);
 }
 
 /* Active Link */
@@ -232,11 +205,12 @@ main {
   margin: 0 0 40px 0;
 }
 .colorfull {
-  color: rgb(248, 79, 1);
+  color: red;
 }
 .text-description {
   font-size: 1.1rem;
   margin-top: -1.1rem;
+  text-align: justify;
 }
 .image-container {
   justify-content: center;
@@ -300,15 +274,15 @@ input:checked + .slider:before {
 }
 
 .card {
-  background: linear-gradient(135deg, #f7a3a3 0%, #e28c8c 100%) !important;
+  background: linear-gradient(135deg, #fdfdfd 0%, #ffffff 100%) !important;
   width: 25%;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   text-align: center;
-  border-top: 4px solid #6a0dad;
-  border-bottom: 4px solid #6a0dad;
+  border-top: 4px solid #ff0000;
+  border-bottom: 4px solid #ff0000;
 
   /* Flexbox for positioning */
   display: flex;
@@ -335,8 +309,8 @@ input:checked + .slider:before {
 .card .price {
   font-size: 22px;
   font-weight: bold;
-  color: #000000;
-  background: rgba(0, 0, 0, 0.1);
+  color: #fffefe;
+  background: rgb(255, 0, 0);
   padding: 8px 15px;
   border-radius: 8px;
   display: inline-block;
@@ -358,14 +332,14 @@ li {
 }
 .card-ul li::before {
   content: "✔";
-  color: #ff0000;
+  color: rgba(255, 0, 0);
   font-size: 18px;
   font-weight: bold;
   margin-right: 10px;
 }
 .read-more {
-  background: #531a1a;
-  color: white;
+  background: white;
+  color: black;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
@@ -376,6 +350,7 @@ li {
 }
 .read-more:hover {
   background: #fa0000;
+  color: white;
 }
 
 /* Modal Styles */
@@ -489,6 +464,7 @@ li {
 
 .services-heading-detail {
   font-size: 1.1rem;
+  text-align: justify;
   margin: 0;
 }
 
@@ -606,7 +582,7 @@ li {
 }
 
 .choose-us-benefit-item {
-  background: linear-gradient(135deg, #ff9a3c, #ff2e63);
+  background: linear-gradient(135deg, #c90404, #fc0101);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 10px;
@@ -647,7 +623,8 @@ li {
 .growth-heading-detail {
   font-size: 1.1rem;
   margin-top: -1rem;
-  margin-right: 15rem;
+  /* margin-right: 15rem; */
+  text-align: justify;
   margin-bottom: 2.8rem;
 }
 .growth-image {
