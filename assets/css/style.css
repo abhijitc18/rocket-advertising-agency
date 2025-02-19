@@ -211,10 +211,15 @@ main {
   font-size: 1.1rem;
   margin-top: -1.1rem;
   text-align: justify;
+  margin-right: 25px;
 }
 .image-container {
   justify-content: center;
   place-content: centers;
+}
+.hero-img {
+  width: 550px;
+  height: 410px;
 }
 
 /* offer section */
@@ -540,6 +545,10 @@ li {
 .choose-us-items {
   width: 100%;
 }
+.choose-us-img {
+  width: 500px;
+  height: 440px;
+}
 /* .choose-us-text {
   margin-top: 20%;
 } */
@@ -629,6 +638,11 @@ li {
 }
 .growth-image {
   width: 490px;
+}
+.growth-img {
+  width: 480px;
+  height: 400px;
+  margin-left: 70px;
 }
 /* End Growth Section */
 
