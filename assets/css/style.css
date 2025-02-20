@@ -640,7 +640,7 @@ li {
   width: 490px;
 }
 .growth-img {
-  width: 480px;
+  width: 400px;
   height: 400px;
   margin-left: 70px;
 }
@@ -777,9 +777,9 @@ li {
   text-align: left;
 }
 
-.contact-title {
+/* .contact-title {
   padding: 0 50px 0 50px;
-}
+} */
 .contact-title h3 {
   font-family: "Poppins";
   font-weight: 600;
@@ -787,21 +787,27 @@ li {
   color: #fff;
   margin: 0;
 }
-
-.contact-description {
+/* .contact-description {
   padding: 0 50px 5px 50px;
-}
+} */
 .contact-description p {
   margin: 10px 0;
   color: #fff;
 }
-
-.contact-detail {
+/* .contact-detail {
   padding: 0 0 0 50px;
-}
+} */
 .contact-detail p {
-  margin-top: 0;
+  /* margin-top: 0; */
   color: #ffffff;
+  display: flex;
+  /* align-items: center;
+  margin: 10px 0; */
+}
+.contact-detail i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #ff0000;
 }
 
 /* Social Media Icons */
