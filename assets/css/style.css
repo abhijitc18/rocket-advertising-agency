@@ -797,7 +797,7 @@ li {
 /* .contact-detail {
   padding: 0 0 0 50px;
 } */
-.contact-detail p {
+.contact-detail p a {
   /* margin-top: 0; */
   color: #ffffff;
   display: flex;
