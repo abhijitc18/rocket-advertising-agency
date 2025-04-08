@@ -898,9 +898,9 @@ li {
   text-align: center;
 }
 .footer-underline-menu {
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
-  margin-bottom: 10px;
+  margin: 20px 0 20px 0;
 }
 .footer-credit a {
   color: var(--main-color);
